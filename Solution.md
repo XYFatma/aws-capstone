@@ -279,9 +279,9 @@ save changes
 Before we create our cluster. We need to launch NAT instance. Because, our EC2 created by autoscaling groups will be located in private subnet and they need to update themselves, install required files and also need to download folders and files from Github. But you can not create Amazon Linux NAT instance from console anymore. You need to run NAT instance via CLI. So check your CLI configurations.
 
 ```text
-aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t2.micro --key-name XXX --security-group-ids sg-XXX-natsecgrp --subnet-id subnet-XXX-publicone
+aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t2.micro --key-name firstkey --security-group-ids sg-sg-0c7d073147164c4bb-natsecgrp --subnet-id subnet-XXX-publicone
 
-aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t2.micro --key-name osvaldo --security-group-ids sg-0397823f99252679e  --subnet-id subnet-0af14f63b6eb1fd3a
+aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t2.micro --key-name firstkey --security-group-ids sg-0c7d073147164c4bb  --subnet-id subnet-00b7c404866d124cf
 
 
     - `ami-0aa210fd2121a98b7`
